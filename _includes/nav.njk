@@ -760,7 +760,7 @@
       <ol class="list-item-wrapper">
         {% for post in collections.stories | reverse %}
           <li class="list-item">
-            <a href="{{ post.url }}" class="{{ page.url | isActive(post.url) }}">
+<a href="{{ post.url | url }}" class="{{ page.url | isActive(post.url) }}">
               <iconcontainer>
                 <svg class="icon" height="18" width="18"><use href="#scroll"></use></svg>
                 <h3>{{ post.data.title }}</h3>
@@ -781,7 +781,7 @@
       <ol class="list-item-wrapper">
         {% for post in collections.newsletter | reverse %}
           <li class="list-item">
-            <a href="{{ post.url }}" class="{{ page.url | isActive(post.url) }}">
+<a href="{{ post.url | url }}" class="{{ page.url | isActive(post.url) }}">
               <iconcontainer>
                 <svg class="icon" height="18" width="18"><use href="#note"></use></svg>
                 <h3>{{ post.data.title }}</h3>
