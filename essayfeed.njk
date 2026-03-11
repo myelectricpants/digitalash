@@ -7,7 +7,10 @@ eleventyExcludeFromCollections: true
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>{{ metadata.title }}</title>
 	<subtitle>Essays feed</subtitle>
-	{% set absoluteUrl %}{{ metadata.essaysfeed.path | url | absoluteUrl(metadata.url) }}{% endset %}
+	Same pattern as before:
+liquid
+
+{% capture absoluteUrl %}{{ metadata.essaysfeed.path | absolute_url }}{% endcapture %}
 	<link href="{{ absoluteUrl }}" rel="self"/>
 	<link href="{{ metadata.url }}"/>
 	<updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
@@ -17,7 +20,7 @@ eleventyExcludeFromCollections: true
 		<email>{{ metadata.author.email }}</email>
 	</author>
 	{%- for post in collections.essays | reverse %}
-	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+	{% capture absolutePostUrl %}{{ post.url | url | absolute_url }}{% endcapture %}
 	<entry>
 		<title>{{ post.data.title }}</title>
 		<link href="{{ absolutePostUrl }}"/>
