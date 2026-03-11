@@ -3,8 +3,8 @@ layout: layouts/base.njk
 templateClass: no-footer
 ---
 
-{% set previousPost = collections.projects | getPreviousCollectionItem %}
-{% set nextPost = collections.projects | getNextCollectionItem %}
+{% assign previousPost = collections.projects | getPreviousCollectionItem %}
+{% assign nextPost = collections.projects | getNextCollectionItem %}
 
 <c-page>
   <page-content>
