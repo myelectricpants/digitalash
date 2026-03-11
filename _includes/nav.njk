@@ -738,8 +738,7 @@
       <ol class="list-item-wrapper">
         {% for post in collections.notes | reverse %}
           <li class="list-item">
-            <a href="{{ post.url }}" class="{{ page.url | isActive(post.url) }}">
-              <iconcontainer>
+<a href="{{ post.url | url }}" class="{{ page.url | isActive(post.url) }}">              <iconcontainer>
                 <svg class="icon" height="18" width="18"><use href="#note"></use></svg>
                 <h3>{{ post.data.title }}</h3>
               </iconcontainer>
