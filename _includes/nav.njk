@@ -702,8 +702,7 @@
 <section class="navigator">
   <section class="navigator-header">
     <div class="navigator-header-profile">
-      <img height="40" width="40" src="/images/me/avatar.png" alt="Robin Rendle" />
-      <a href="/">Robin Rendle</a> / v19
+<img height="40" width="40" src="{{ '/images/me/avatar.png' | url }}" alt="Robin Rendle" />      <a href="{{ '/' | url }}">Robin Rendle</a> / v19
     </div>
 
     <div class="navigator-buttons">
@@ -719,7 +718,7 @@
   <nav class="directory">
     <ul style="list-style: none; padding: 0; margin: 0;">
       <li class="list-item">
-        <a href="/" class="{{ page.url | isActive('/') }}">
+        <a href="{{ '/' | url }}" class="{{ page.url | isActive('/') }}">
           <iconcontainer>
             <svg class="icon" height="18" width="18"><use href="#file-md"></use></svg>
             <h3>README</h3>
@@ -729,7 +728,7 @@
     </ul>
     <details {% if page.url.startsWith('/notes/') and page.url != '/notes/' %}open{% endif %}>
       <summary class="list-item-group">
-        <a href="/notes" class="{{ page.url | isActive('/notes') }}">
+        <a href="{{ '/notes' | url }}" class="{{ page.url | isActive('/notes') }}">
           <iconcontainer>
             <svg class="icon" height="18" width="18"><use href="#folder"></use></svg>
             <h3>Notes</h3>
@@ -751,7 +750,7 @@
     </details>
     <details {% if page.url.startsWith('/stories/') and page.url != '/stories/' %}open{% endif %}>
       <summary class="list-item-group">
-        <a href="/stories" class="{{ page.url | isActive('/stories') }}">
+        <a href="{{ '/stories' | url }}" class="{{ page.url | isActive('/stories') }}">
           <iconcontainer>
             <svg class="icon" height="18" width="18"><use href="#folder"></use></svg>
           <h3>Stories</h3>
@@ -773,8 +772,7 @@
     </details>
     <details {% if page.url.startsWith('/newsletter/') and page.url != '/newsletter/' %}open{% endif %}>
       <summary class="list-item-group">
-        <a href="/newsletter" class="{{ page.url | isActive('/newsletter') }}">
-          <iconcontainer>
+<a href="{{ '/newsletter' | url }}" class="{{ page.url | isActive('/newsletter') }}">          <iconcontainer>
             <svg class="icon" height="18" width="18"><use href="#folder"></use></svg>
             <h3>Newsletter</h3>
           </iconcontainer>
@@ -795,8 +793,7 @@
     </details>
     <details {% if page.url.startsWith('/photos/') and page.url != '/photos/' %}open{% endif %}>
       <summary class="list-item-group">
-        <a href="/photos" class="{{ page.url | isActive('/photos') }}">
-          <iconcontainer>
+<a href="{{ '/photos' | url }}" class="{{ page.url | isActive('/photos') }}">          <iconcontainer>
             <svg class="icon" height="18" width="18"><use href="#folder"></use></svg>
             <h3>Photos</h3>
           </iconcontainer>
@@ -807,7 +804,7 @@
           <li class="list-item">
             <details {% if page.url.startsWith('/photos/' + folder.slug + '/') and page.url != '/photos/' + folder.slug + '/' %}open{% endif %}>
               <summary class="list-item-group">
-                <a href="/photos/{{ folder.slug }}/" class="{{ page.url | isActive('/photos/' + folder.slug) }}">
+               <a href="{{ ('/photos/' + folder.slug + '/') | url }}" class="{{ page.url | isActive('/photos/' + folder.slug) }}">
                   <iconcontainer>
                     <svg class="icon" height="18" width="18"><use href="#folder"></use></svg>
                     <h3>{{ folder.name }}</h3>
