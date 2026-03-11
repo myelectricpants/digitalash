@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_OPTIONS='--max-old-space-size=8192' npx @11ty/eleventy",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' npx @11ty/eleventy",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "watch": "NODE_OPTIONS='--max-old-space-size=8192' npx @11ty/eleventy --watch",
-    "serve": "NODE_OPTIONS='--max-old-space-size=8192' npx @11ty/eleventy --serve",
-    "start": "NODE_OPTIONS='--max-old-space-size=8192' npx @11ty/eleventy --serve",
+    "watch": "NODE_OPTIONS='--max-old-space-size=4096' npx @11ty/eleventy --watch",
+    "serve": "NODE_OPTIONS='--max-old-space-size=4096' npx @11ty/eleventy --serve",
+    "start": "NODE_OPTIONS='--max-old-space-size=4096' npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "author": {
