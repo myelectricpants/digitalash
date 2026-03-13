@@ -11,7 +11,7 @@ template: archive
     <div class="archive-head-item align-right">Published</div>
   </div>
   {% for post in collections.notes | reverse %}
-    <a class="archive-row" href="{{ post.url }}">
+    <a class="archive-row" href="{{ post.url | url}}">
         <div class="archive-column visited-marker">
           {{ post.data.title }}
         </div>
