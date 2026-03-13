@@ -1,10 +1,7 @@
 ---
 layout: layouts/cascade-post.njk
-title: Design Systems Burnout
-date: 2024-01-28T10:15:10-08:00
-city: San Francisco
-country: California
-extract: And the work worthy of our care.
+title: Building a Writing Practice
+
 ---
 
 I don’t actually know where to begin with this. A couple of ideas:
